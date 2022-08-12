@@ -1,0 +1,12 @@
+<section class="d-flex justify-content-center flex-wrap">
+    <div class="card mx-2 my-2" style="width: 18rem;" *ngFor="let char of characters">
+        <img class="card-img-top" [src]="char.image" alt="Card image cap">
+        <div class="card-body">
+          <h3 class="card-title">{{ char.name }}</h3>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{char.gender}}</li>
+          <li class="list-group-item">{{char.species}}</li>
+        </ul>
+      </div>
+</section>

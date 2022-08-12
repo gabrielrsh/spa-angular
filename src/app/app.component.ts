@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PeopleService } from './shared/services/people.service';
 
 @Component({
   selector: 'spa-root',
@@ -10,35 +11,17 @@ export class AppComponent implements OnInit{
   text = '';
   nome = 'Gabriel R. S.'
 
-  pessoas = [
-    {
-      nome: "Luisito",
-      sobrenome: "Suarez"
-    },
-    {
-      nome: "Jonathan",
-      sobrenome: "Calleri"
-    },
-    {
-      nome: "Lionel",
-      sobrenome: "Messi"
-    },
-    {
-      nome: "Cristiano",
-      sobrenome: "Ronaldo"
-    },
-  ];
-
 
   constructor(){}
   
   ngOnInit(): void {
+
     let interval = setInterval(() => {
       this.count++;
       if(this.count === 10) {
         clearInterval(interval)
       }
-    }, 1000) 
+    }, 1000)
   }
 
   clicou(nome:string): void {

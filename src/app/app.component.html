@@ -44,9 +44,7 @@
     </li>
 </ul>
 
-<ul class="list-group mx-auto col-3 mt-2">
-    <li *ngFor="let pessoa of pessoas" class="list-group-item"> {{pessoa.nome}} {{pessoa.sobrenome}} </li>
-</ul>
+<spa-list-people></spa-list-people>
 
 <!-- data binding -->
 <div class="col-4 mx-auto mt-3">
@@ -59,6 +57,13 @@
     >
     <h4>Saída: {{ text }}</h4>
     <button class="btn btn-primary" (click)="clicou(text)">Clique</button>
+</div>
+
+<div class="text-center my-5">
+    <h2>Listagem de personagens de Rick and Morty</h2>
+    
+    <spa-list-api></spa-list-api>     
+    
 </div>
 
 
